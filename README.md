@@ -34,6 +34,10 @@ strapi:
             layout: strapi_article.html
             # Generate output files or not (default: false)
             output: true
+            # Params for strapi collection request
+            url_params:
+                - '_sort=published_at:desc'
+                - '_limit=10000'
 ```
 
 ## Usage
