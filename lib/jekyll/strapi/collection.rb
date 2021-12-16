@@ -20,7 +20,7 @@ module Jekyll
       def each
         # Initialize the HTTP query
         path = "/#{@config['type'] || @collection_name}"
-        path = path + "?#{@config['url_params'].join('&')}" if config['url_params'].any?
+        path = path + "?#{@config['url_params'].join('&')}" if config['url_params']
         uri = URI("#{@site.endpoint}#{path}")
         Jekyll.logger.info "Jekyll Strapi:", "Fetching entries from #{uri}"
         # Get entries
